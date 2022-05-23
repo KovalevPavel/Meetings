@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Meetings"
+include ':app'
+include ':feature_splash'
+include ':main_host'
+include ':navigation'
+include ':core_design'
+include ':feature_profile'
+include ':feature_profile_api'
+include ':feature_events_api'
+include ':feature_events'

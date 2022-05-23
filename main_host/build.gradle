@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation project(':core_design')
+    implementation project(':navigation')
+    implementation project(':feature_profile_api')
+    implementation project(':feature_events_api')
+
+    implementation deps.view_binding
+    implementation deps.navigation.core
+    implementation deps.navigation.ktx
+    implementation deps.timber
+
+    implementation deps.di.core
+    implementation deps.di.android
+}

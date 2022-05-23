@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Toolbar.Navigation" parent="Widget.MaterialComponents.Toolbar.Surface">
+        <item name="navigationIcon">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.BottomNavigationView.Black" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:background">@color/black</item>
+    </style>
+</resources>

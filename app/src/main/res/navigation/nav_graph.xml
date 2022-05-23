@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="me.kovp.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_mainHostFragment"
+            app:destination="@id/mainHostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainHostFragment"
+        android:name="me.kovp.main_host.MainHostFragment"
+        android:label="MainHostFragment"
+        tools:layout="@layout/fragment_main_host"/>
+
+</navigation>

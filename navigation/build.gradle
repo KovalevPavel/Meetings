@@ -1,0 +1,12 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation deps.navigation.core
+    implementation deps.navigation.ktx
+    implementation deps.androidx.lifecycle
+
+    implementation deps.di.core
+}

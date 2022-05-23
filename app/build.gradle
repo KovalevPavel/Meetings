@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation project(':navigation')
+    implementation project(':feature_splash')
+    implementation project(':main_host')
+    implementation project(':feature_profile')
+    implementation project(':feature_profile_api')
+    implementation project(':feature_events_api')
+
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.lifecycle
+    implementation deps.androidx.viewmodel
+    implementation deps.androidx.livedata
+
+    implementation deps.material
+    implementation deps.timber
+    implementation deps.date_time
+    implementation deps.view_binding
+
+    implementation deps.di.core
+    implementation deps.di.android
+
+    implementation deps.navigation.core
+    implementation deps.navigation.ktx
+}
