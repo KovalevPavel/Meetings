@@ -1,27 +1,28 @@
 ext {
     versions = [
-            androidx    : [
+            androidx       : [
                     core     : '1.7.0',
                     appcompat: '1.4.1',
                     lifecycle: '2.5.0-rc01'
             ],
-            di          : [
+            di             : [
                     koin    : '3.2.0-beta-1',
                     koin_ksp: '1.0.0-beta-2',
             ],
-            material    : '1.6.0',
-            view_binding: '1.5.6',
-            navigation  : '2.4.2',
-            timber      : '5.0.1',
-            date_time   : '1.4.0',
+            material       : '1.6.0',
+            glide          : '4.13.0',
+            view_binding   : '1.5.6',
+            navigation     : '2.4.2',
+            timber         : '5.0.1',
+            date_time      : '1.4.0',
             adapterdelegate: '4.3.2',
-            test        : [
+            test           : [
                     junit: '4.13.2'
             ]
     ]
 
     deps = [
-            androidx    : [
+            androidx       : [
                     core_ktx : "androidx.core:core-ktx:${versions.androidx.core}",
                     appcompat: "androidx.appcompat:appcompat:${versions.androidx.appcompat}",
                     lifecycle: "androidx.lifecycle:lifecycle-common:${versions.androidx.lifecycle}",
@@ -29,19 +30,23 @@ ext {
                     livedata : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.androidx.lifecycle}",
                     viewmodel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.androidx.lifecycle}"
             ],
-            di          : [
+            di             : [
                     core      : "io.insert-koin:koin-core:${versions.di.koin}",
                     android   : "io.insert-koin:koin-android:${versions.di.koin}",
                     navigation: "io.insert-koin:koin-androidx-navigation:${versions.di.koin}"
             ],
-            material    : "com.google.android.material:material:${versions.material}",
-            view_binding: "com.github.kirich1409:viewbindingpropertydelegate:${versions.view_binding}",
+            material       : "com.google.android.material:material:${versions.material}",
+            glide          : [
+                    core: "com.github.bumptech.glide:glide:${versions.glide}",
+                    kapt: "com.github.bumptech.glide:compiler:${versions.glide}"
+            ],
+            view_binding   : "com.github.kirich1409:viewbindingpropertydelegate:${versions.view_binding}",
             adapterdelegate: "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:${versions.adapterdelegate}",
-            navigation  : [
+            navigation     : [
                     core: "androidx.navigation:navigation-fragment-ktx:${versions.navigation}",
                     ktx : "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
             ],
-            date_time   : "com.jakewharton.threetenabp:threetenabp:${versions.date_time}",
-            timber      : "com.jakewharton.timber:timber:${versions.timber}"
+            date_time      : "com.jakewharton.threetenabp:threetenabp:${versions.date_time}",
+            timber         : "com.jakewharton.timber:timber:${versions.timber}"
     ]
 }

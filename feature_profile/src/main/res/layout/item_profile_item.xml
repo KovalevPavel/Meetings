@@ -27,7 +27,7 @@
         android:layout_marginStart="@dimen/margin_xxh"
         android:fontFamily="@font/roboto_regular"
         android:textStyle="bold"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

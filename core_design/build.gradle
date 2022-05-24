@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 dependencies {
@@ -8,6 +9,12 @@ dependencies {
     api deps.androidx.appcompat
     api deps.androidx.fragment
     api deps.material
+
+    implementation deps.adapterdelegate
+    implementation deps.view_binding
+
+    implementation deps.glide.core
+    kapt deps.glide.kapt
 
     implementation deps.di.core
     implementation deps.di.android
