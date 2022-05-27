@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import me.kovp.core_design.SpaceItemAdapterData
 import me.kovp.core_design.delegate_adapter.ItemViewState
+import me.kovp.core_design.delegate_adapter.LineDecorator
 import me.kovp.feature_profile.delegates.ProfileHeaderAdapterData
 import me.kovp.feature_profile.delegates.ProfileItemAdapterData
 import me.kovp.navigation.AppRouter
@@ -40,11 +41,15 @@ class ProfileViewModelImpl(
             ),
             SpaceItemAdapterData(height = me.kovp.core_design.R.dimen.margin_xxh),
             ProfileItemAdapterData(
+                id = "",
                 icon = R.drawable.ic_coins,
+                decorator = LineDecorator(),
                 title = "Профиль"
             ),
             ProfileItemAdapterData(
+                id = "",
                 icon = R.drawable.ic_coins,
+                decorator = LineDecorator(),
                 title = "Расходы"
             )
         )

@@ -8,7 +8,7 @@
     android:clickable="true"
     android:focusable="true"
     android:paddingHorizontal="@dimen/margin_h"
-    android:paddingVertical="@dimen/margin_s">
+    android:paddingVertical="@dimen/margin_h">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivProfileItemIcon"

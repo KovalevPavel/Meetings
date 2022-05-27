@@ -5,6 +5,9 @@ import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 import me.kovp.core_design.BaseFragment
+import me.kovp.core_design.addLineItemDecoration
+import me.kovp.core_design.addSpaceItemDecoration
+import me.kovp.core_design.defaultDecoratorProvider
 import me.kovp.core_design.delegate_adapter.DefaultDifferConfig
 import me.kovp.core_design.spaceItemDelegate
 import me.kovp.feature_profile.databinding.FragmentProfileBinding
@@ -37,7 +40,7 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
 
     override fun initUi() {
         binding.rvProfileItems.adapter = itemsAdapter
-        binding.rvProfileItems.addItemDecoration(DividerItemDecoration(requireContext(), VERTICAL))
+        binding.rvProfileItems.addLineItemDecoration(itemsAdapter.defaultDecoratorProvider)
     }
 
     override fun initViewModelObservers() {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="margin_xxxh">64dp</dimen>
     <dimen name="margin_xxh">32dp</dimen>
     <dimen name="margin_xh">24dp</dimen>
     <dimen name="margin_h">16dp</dimen>
@@ -11,4 +12,9 @@
     <dimen name="text_size_17">17sp</dimen>
 
     <dimen name="max_corner_radius">1000dp</dimen>
+
+    <dimen name="default_divider_width">1dp</dimen>
+    <dimen name="default_divider_margin_left">@dimen/margin_h</dimen>
+    <dimen name="default_divider_margin_right">0dp</dimen>
+    <dimen name="default_divider_space">16dp</dimen>
 </resources>
