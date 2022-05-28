@@ -1,5 +1,7 @@
 package me.kovp.feature_events.domain
 
-class GetEventsInteractor {
-    suspend operator fun invoke() {}
+class GetEventsInteractor(
+    private val repo: EventsRepository
+) {
+    suspend operator fun invoke() = repo.getAllEvents()
 }

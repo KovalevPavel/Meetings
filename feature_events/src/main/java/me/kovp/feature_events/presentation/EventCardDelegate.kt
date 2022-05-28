@@ -1,4 +1,4 @@
-package me.kovp.feature_events
+package me.kovp.feature_events.presentation
 
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 import me.kovp.core_design.delegate_adapter.Decorator
