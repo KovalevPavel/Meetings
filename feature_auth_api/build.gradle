@@ -1,0 +1,12 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation project(':feature_auth')
+    implementation project(':navigation')
+
+    implementation deps.navigation.core
+    implementation deps.navigation.ktx
+}

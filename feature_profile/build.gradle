@@ -6,6 +6,7 @@ plugins {
 dependencies {
     implementation project(':core_design')
     implementation project(':navigation')
+    implementation project(':feature_network')
 
     implementation deps.di.core
     implementation deps.di.android

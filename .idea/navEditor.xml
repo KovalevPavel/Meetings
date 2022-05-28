@@ -8,23 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="mainHostFragment">
+                  <entry key="authFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="309" />
-                            <option name="y" value="39" />
+                            <option name="x" value="375" />
+                            <option name="y" value="-221" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_host_to_events_graph">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_host_to_profile_graph">
+                            <entry key="action_authFragment_to_mainHostFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -34,25 +29,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_host_events">
+                  <entry key="mainHostFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="531" />
-                            <option name="y" value="348" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="nav_host_profile">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="520" />
-                            <option name="y" value="-15" />
+                            <option name="x" value="711" />
+                            <option name="y" value="43" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -69,12 +52,39 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_splashFragment_to_authFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_splashFragment_to_mainHostFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </LayoutPositions>
+          </value>
+        </entry>
+        <entry key="nav_host_auth.xml">
+          <value>
+            <LayoutPositions>
+              <option name="myPositions">
+                <map>
+                  <entry key="authFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="40" />
+                            <option name="y" value="40" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

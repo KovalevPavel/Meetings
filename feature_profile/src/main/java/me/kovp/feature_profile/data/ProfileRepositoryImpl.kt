@@ -1,10 +1,13 @@
 package me.kovp.feature_profile.data
 
+import me.kovp.feature_network.api.ProfileInfoApi
 import me.kovp.feature_profile.domain.ProfileInfoVo
 import me.kovp.feature_profile.domain.ProfileMenuItemVo
 import me.kovp.feature_profile.domain.ProfileRepository
 
-class ProfileRepositoryImpl : ProfileRepository {
+class ProfileRepositoryImpl(
+    private val api: ProfileInfoApi
+) : ProfileRepository {
     override suspend fun getProfileInfo(): ProfileInfoVo {
         return ProfileInfoVo(
             userName = "Павел Ковалев",

@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+}
+
+dependencies {
+    implementation project(':core_auth')
+
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.appcompat
+    implementation deps.di.core
+    implementation deps.di.android
+
+    implementation platform(deps.okhttp.bom)
+    implementation deps.okhttp.core
+    implementation deps.okhttp.interceptor
+
+    implementation deps.retrofit.core
+    implementation deps.retrofit.scalar_factory
+    implementation deps.retrofit.gson_factory
+
+    implementation deps.gson
+}

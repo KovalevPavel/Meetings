@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         bindNavigation(R.id.fragmentContainerView)
         loadKoinModules(
             module {
-                viewModel { MainViewModelImpl() }
+                viewModel { MainViewModelImpl(authHolder = get()) }
             }
         )
         super.onCreate(savedInstanceState)

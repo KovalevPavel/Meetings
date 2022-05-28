@@ -11,7 +11,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 
 fun Module.profileModule() {
-    single<ProfileRepository> { ProfileRepositoryImpl() }
+    single<ProfileRepository> { ProfileRepositoryImpl(get()) }
     single { ProfileScreenMapper() }
     single { GetProfileInfoInteractor(get()) }
     single { GetMenuItemsInteractor(get()) }

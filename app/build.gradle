@@ -5,11 +5,15 @@ plugins {
 
 dependencies {
     implementation project(':navigation')
+    implementation project(':core_auth')
     implementation project(':feature_splash')
     implementation project(':main_host')
+    implementation project(':feature_network')
     implementation project(':feature_profile')
     implementation project(':feature_profile_api')
     implementation project(':feature_events_api')
+    implementation project(':feature_auth_api')
+    implementation project(':feature_auth')
 
     implementation deps.androidx.core_ktx
     implementation deps.androidx.appcompat

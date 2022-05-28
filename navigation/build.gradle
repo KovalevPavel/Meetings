@@ -4,6 +4,8 @@ plugins {
 }
 
 dependencies {
+    implementation project(':core_auth')
+
     implementation deps.navigation.core
     implementation deps.navigation.ktx
     implementation deps.androidx.lifecycle

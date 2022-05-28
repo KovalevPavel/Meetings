@@ -11,6 +11,7 @@
     <dimen name="text_size_24">24sp</dimen>
     <dimen name="text_size_17">17sp</dimen>
 
+    <dimen name="button_height">60dp</dimen>
     <dimen name="max_corner_radius">1000dp</dimen>
 
     <dimen name="default_divider_width">1dp</dimen>

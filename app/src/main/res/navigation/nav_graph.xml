@@ -13,12 +13,25 @@
         <action
             android:id="@+id/action_splashFragment_to_mainHostFragment"
             app:destination="@id/mainHostFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_authFragment"
+            app:destination="@id/authFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/mainHostFragment"
         android:name="me.kovp.main_host.MainHostFragment"
         android:label="MainHostFragment"
-        tools:layout="@layout/fragment_main_host"/>
+        tools:layout="@layout/fragment_main_host" />
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="me.kovp.feature_auth.presentation.AuthFragment"
+        android:label="AuthFragment"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_mainHostFragment"
+            app:destination="@id/mainHostFragment" />
+    </fragment>
 
 </navigation>

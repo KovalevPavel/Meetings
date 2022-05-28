@@ -4,6 +4,7 @@ plugins {
 }
 
 dependencies {
+    implementation project(':core_auth')
     implementation project(':core_design')
     
     implementation deps.androidx.core_ktx

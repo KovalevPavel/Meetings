@@ -2,7 +2,10 @@ package me.kovp.meetings
 
 import android.app.Application
 import com.jakewharton.threetenabp.AndroidThreeTen
+import me.kovp.feature_network.di.networkModule
+import me.kovp.meetings.di.authModule
 import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.loadKoinModules
 import org.koin.core.context.startKoin
 import timber.log.Timber
 
@@ -28,6 +31,12 @@ class MeetingsApp : Application() {
     private fun initDi() {
         startKoin {
             androidContext(this@MeetingsApp)
+            loadKoinModules(
+                modules = listOf(
+                    networkModule(),
+                    authModule()
+                )
+            )
         }
     }
 }

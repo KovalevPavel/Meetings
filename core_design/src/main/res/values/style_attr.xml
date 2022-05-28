@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MeetingsButton">
+        <attr name="button_style" format="reference" />
+    </declare-styleable>
+
+</resources>
