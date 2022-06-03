@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/margin_h">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransactionPersonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/roboto_regular"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_transaction_party_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_m"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:maxLines="2"
+        android:textSize="@dimen/text_size_17"
+        app:layout_constraintEnd_toStartOf="@id/tvTransactionSum"
+        app:layout_constraintStart_toStartOf="@id/tvTransactionPersonName"
+        app:layout_constraintTop_toBottomOf="@id/tvTransactionPersonName"
+        tools:text="@tools:sample/lorem/random" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransactionSum"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_m"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_transaction_party_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1200 P" />
+</androidx.constraintlayout.widget.ConstraintLayout>

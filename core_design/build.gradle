@@ -10,8 +10,8 @@ dependencies {
     api deps.androidx.fragment
     api deps.material
 
-    implementation deps.adapterdelegate
-    implementation deps.view_binding
+    api deps.adapterdelegate
+    api deps.view_binding
 
     implementation deps.glide.core
     kapt deps.glide.kapt
