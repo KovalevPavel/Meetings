@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.AppCompatEditText xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:backgroundTint="@color/white"
-    android:textCursorDrawable="@drawable/background_text_cursor"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="@dimen/margin_h"/>
+    android:paddingHorizontal="@dimen/margin_h">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etTextInputView"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:backgroundTint="@color/white"
+        android:textCursorDrawable="@drawable/background_text_cursor"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/lorem" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTextInputError"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="@color/error_red"
+        app:layout_constraintTop_toBottomOf="@id/etTextInputView"
+        tools:text="@tools:sample/lorem" />
+</androidx.constraintlayout.widget.ConstraintLayout>

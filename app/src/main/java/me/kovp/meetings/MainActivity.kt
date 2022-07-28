@@ -1,34 +1,35 @@
 package me.kovp.meetings
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import by.kirich1409.viewbindingdelegate.viewBinding
-import me.kovp.meetings.databinding.ActivityMainBinding
-import me.kovp.navigation.AppRouter
-import me.kovp.navigation.bindNavigation
-import org.koin.android.ext.android.inject
-import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.lightColors
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion
+import com.ramcosta.composedestinations.DestinationsNavHost
+import me.kovp.core_design.theme.meetingsLightColors
+import me.kovp.meetings.feature_splash.splashModule
 import org.koin.core.context.loadKoinModules
-import org.koin.dsl.module
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
-    private val binding by viewBinding(vbFactory = ActivityMainBinding::bind)
-
-    private val viewModel: MainViewModel by viewModel<MainViewModelImpl>()
-    private val router by inject<AppRouter>()
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        bindNavigation(R.id.fragmentContainerView)
-        loadKoinModules(
-            module {
-                viewModel { MainViewModelImpl(authHolder = get()) }
-            }
-        )
         super.onCreate(savedInstanceState)
-        viewModel.navigationCommandLiveData.observe(this) {
-            router.handleNavigationCommand(it)
+        setContent {
+            MaterialTheme(
+                colors = meetingsLightColors
+            ) {
+                Surface(color = MaterialTheme.colors.surface, modifier = Modifier.fillMaxSize()) {
+                    DestinationsNavHost(
+                        navGraph = NavGraphs.root
+                    )
+                }
+            }
         }
     }
 }
-

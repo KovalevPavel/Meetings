@@ -4,12 +4,10 @@ plugins {
 }
 
 dependencies {
+    implementation project(':core')
     implementation project(':core_design')
-    implementation project(':navigation')
 
     implementation deps.di.core
     implementation deps.di.android
     implementation deps.timber
-    implementation deps.adapterdelegate
-    implementation deps.view_binding
 }

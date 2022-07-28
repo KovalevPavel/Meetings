@@ -1,7 +1,7 @@
 package me.kovp.meetings.auth
 
 import android.content.Context
-import me.kovp.core_auth.AuthHolder
+import me.kovp.domain_auth.AuthHolder
 
 class AuthHolderImpl(
     context: Context

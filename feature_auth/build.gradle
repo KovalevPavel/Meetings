@@ -5,16 +5,18 @@ plugins {
 
 dependencies {
 
-    implementation project(':core_auth')
+    implementation project(':domain_auth')
     implementation project(':core_design')
-    implementation project(':navigation')
     implementation project(':feature_network')
+
+    implementation deps.compose.viewmodel
+    implementation deps.compose.livedata
 
     implementation deps.di.core
     implementation deps.di.android
+    implementation deps.di.compose
+
     implementation deps.timber
-    implementation deps.adapterdelegate
-    implementation deps.view_binding
 
     implementation deps.gson
 }

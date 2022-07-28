@@ -1,11 +1,11 @@
 package me.kovp.feature_transactions
 
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
-import me.kovp.core_design.delegate_adapter.ItemViewState
+import me.kovp.core_design.delegate_adapter.ItemViewStates
 import me.kovp.feature_transactions.databinding.ItemTransactionBinding
 
 fun transactionItemAdapterDelegate() =
-    adapterDelegateViewBinding<TransactionItemAdapterData, ItemViewState, ItemTransactionBinding>(
+    adapterDelegateViewBinding<TransactionItemAdapterData, ItemViewStates, ItemTransactionBinding>(
         viewBinding = { layoutInflater, parent ->
             ItemTransactionBinding.inflate(layoutInflater, parent, false)
         }
@@ -24,4 +24,4 @@ data class TransactionItemAdapterData(
     val personName: String,
     val partyTitle: String,
     val sum: String
-) : ItemViewState()
+) : ItemViewStates()

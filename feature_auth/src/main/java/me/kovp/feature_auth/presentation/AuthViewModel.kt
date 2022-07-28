@@ -3,96 +3,43 @@ package me.kovp.feature_auth.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import me.kovp.core_design.TextInputAdapterData
-import me.kovp.core_design.delegate_adapter.ItemViewState
-import me.kovp.core_design.meetings_button.MeetingsButtonAdapterData
-import me.kovp.core_design.meetings_button.MeetingsButtonAdapterData.ButtonState
-import me.kovp.feature_auth.domain.LoginUserInteractor
-import me.kovp.feature_auth.domain.ValidateInputDataInteractor
-import me.kovp.feature_auth.presentation.AuthScreenMapper.Companion.LOGIN_BUTTON_ID
-import me.kovp.feature_auth.presentation.AuthScreenMapper.Companion.LOGIN_INPUT_ID
-import me.kovp.feature_auth.presentation.AuthScreenMapper.Companion.PASSWORD_INPUT_ID
-import timber.log.Timber
+import me.kovp.core_design.components.text_input_field.EditTextVs
+import java.util.UUID
 
-interface AuthViewModel {
-    val title: LiveData<String>
-    val items: LiveData<List<ItemViewState>>
+class AuthViewModel : ViewModel() {
 
-    fun onTextChange(item: TextInputAdapterData)
-    fun onButtonClick(button: MeetingsButtonAdapterData)
-}
+    val items: LiveData<List<EditTextVs>>
+        get() = _items
 
-class AuthViewModelImpl(
-    private val screenMapper: AuthScreenMapper,
-    private val validateInputData: ValidateInputDataInteractor,
-    private val loginUser: LoginUserInteractor
-) : ViewModel(), AuthViewModel {
-    override val title = MutableLiveData("Вход")
-    override val items = MutableLiveData<List<ItemViewState>>()
+    private val _items = MutableLiveData<List<EditTextVs>>()
 
-    private val inputState = mutableMapOf(
-        LOGIN_INPUT_ID to "",
-        PASSWORD_INPUT_ID to ""
-    )
+    val inputText: LiveData<String>
+        get() = _inputText
 
-    private val activeButton by lazy {
-        MeetingsButtonAdapterData(
-            id = LOGIN_BUTTON_ID,
-            style = me.kovp.core_design.R.style.MeetingsButtonPrimaryActive,
-            state = ButtonState(
-                title = "Обмазаться",
-                enabled = true
-            )
-        )
-    }
-
-    private val inactiveButton by lazy {
-        MeetingsButtonAdapterData(
-            id = LOGIN_BUTTON_ID,
-            style = me.kovp.core_design.R.style.MeetingsButtonPrimaryInactive,
-            state = ButtonState(
-                title = "Обмазаться",
-                enabled = false
-            )
-        )
-    }
+    private val _inputText = MutableLiveData<String>()
 
     init {
-        fetchScreenData()
+        _items.value = listOf(
+            EditTextVs(
+                id = TEXT_INPUT_ID,
+                hint = "hint",
+            ),
+            EditTextVs(
+                id = UUID.randomUUID().toString(),
+                hint = "hint",
+            )
+        )
     }
 
-    override fun onTextChange(item: TextInputAdapterData) {
-        inputState[item.id] = item.text
-        updateButtonState()
-    }
-
-    override fun onButtonClick(button: MeetingsButtonAdapterData) {
-        when (button.id) {
-            LOGIN_BUTTON_ID -> {
-                viewModelScope.launch(Dispatchers.IO) {
-                    loginUser(userData = inputState)
-                        .let(Timber::d)
-                }
+    fun onTextChange(editVs: EditTextVs) {
+        when (editVs.id) {
+            TEXT_INPUT_ID -> {
+                _inputText.value = editVs.text
             }
         }
     }
 
-    private fun fetchScreenData() {
-        screenMapper.map().let(items::postValue)
-    }
-
-    private fun updateButtonState() {
-        val currentButtonState = items.value.orEmpty().lastOrNull() ?: return
-        val newButtonState = if (validateInputData(inputState)) activeButton else activeButton
-        if (currentButtonState != newButtonState) {
-            items.value = items.value
-                .orEmpty()
-                .dropLast(1)
-                .toMutableList()
-                .apply { add(newButtonState) }
-        }
+    companion object {
+        internal const val TEXT_INPUT_ID = "TEXT_INPUT_ID"
     }
 }

@@ -11,4 +11,6 @@
     <color name="blue">#0288D1</color>
     <color name="black_30">#30FFFFFF</color>
     <color name="button_light_ripple">#1FFFFFFF</color>
+    <color name="error_red">@android:color/holo_red_light</color>
+    <color name="gray_dark">#424242</color>
 </resources>

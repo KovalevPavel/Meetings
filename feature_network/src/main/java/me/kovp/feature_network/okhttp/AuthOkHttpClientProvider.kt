@@ -1,6 +1,6 @@
 package me.kovp.feature_network.okhttp
 
-import me.kovp.core_auth.AuthHolder
+import me.kovp.domain_auth.AuthHolder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

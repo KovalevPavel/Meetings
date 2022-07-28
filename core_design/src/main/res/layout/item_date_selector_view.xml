@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/margin_h">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toTopOf="@id/tvSelectorError"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Дата" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_datetime_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="@dimen/margin_h"
+        android:paddingVertical="@dimen/margin_m"
+        android:textSize="@dimen/text_size_17"
+        app:layout_constraintBottom_toTopOf="@id/tvSelectorError"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Выбери дату" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectorError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_m"
+        android:textColor="@color/error_red"
+        android:textSize="@dimen/text_size_17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectorTitle"
+        tools:text="@tools:sample/lorem" />
+</androidx.constraintlayout.widget.ConstraintLayout>

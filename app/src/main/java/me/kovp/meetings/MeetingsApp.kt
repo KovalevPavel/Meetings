@@ -3,6 +3,7 @@ package me.kovp.meetings
 import android.app.Application
 import com.jakewharton.threetenabp.AndroidThreeTen
 import me.kovp.feature_network.di.networkModule
+import me.kovp.meetings.BuildConfig
 import me.kovp.meetings.di.authModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.loadKoinModules

@@ -1,0 +1,12 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation project (':core_design')
+
+    implementation deps.androidx.lifecycle
+    implementation deps.androidx.livedata
+    implementation deps.androidx.viewmodel
+}

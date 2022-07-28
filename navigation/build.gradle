@@ -1,14 +1,29 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp' version '1.6.10-1.0.4'
 }
 
 dependencies {
-    implementation project(':core_auth')
+    implementation "androidx.compose.runtime:runtime:1.1.1"
+    implementation project(':domain_auth')
 
-    implementation deps.navigation.core
-    implementation deps.navigation.ktx
-    implementation deps.androidx.lifecycle
+//    implementation project(':feature_splash')
+//    implementation project(':feature_auth_api')
+//    implementation project(':feature_main_host_api')
+//    implementation project(':feature_profile_api')
+//    implementation project(':feature_events_api')
+
+//    implementation deps.navigation.core
+//    implementation deps.navigation.ktx
+//    implementation deps.androidx.lifecycle
+
+//    api deps.navigation.core
+//    api deps.navigation.ktx
 
     implementation deps.di.core
+
+    //navigation
+    implementation 'io.github.raamcosta.compose-destinations:core:1.5.13-beta'
+    ksp 'io.github.raamcosta.compose-destinations:ksp:1.5.13-beta'
 }
