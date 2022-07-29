@@ -18,7 +18,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import me.kovp.core_design.delegate_adapter.ItemViewState
 import me.kovp.core_design.delegate_adapter.lazyColumnAdapterDelegate
 
 @Composable
@@ -38,14 +37,6 @@ fun editTextAdapterDelegate(onTextChange: (EditTextVs) -> Unit) =
             }
         )
     }
-
-data class EditTextVs(
-    override var id: String,
-    var text: String = "",
-    val hint: String = "",
-    val textSize: TextUnit = 14.sp,
-    val keyboardType: KeyBoardType = KeyBoardType.TEXT
-) : ItemViewState
 
 @Composable
 fun EditTextCompose(

@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    implementation "androidx.compose.runtime:runtime:1.1.1"
+    implementation "androidx.compose.runtime:runtime:1.2.0"
     implementation project(':domain_auth')
 
     implementation deps.androidx.core_ktx

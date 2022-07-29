@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import kotlin.reflect.KClass
 
 interface ViewStateAdapterDelegate {
-    val clazz: KClass<out ItemViewState>
 
     fun isDelegateValid(itemToBind: ItemViewState): Boolean
 

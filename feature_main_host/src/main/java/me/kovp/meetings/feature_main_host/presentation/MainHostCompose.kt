@@ -10,11 +10,9 @@ import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 
 @Composable
 fun MainHostCompose(
-    navController: NavController
 ) {
     Scaffold(bottomBar = {
         BottomNavigation {

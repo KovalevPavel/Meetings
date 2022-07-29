@@ -15,7 +15,7 @@ ext {
             retrofit       : '2.9.0',
             gson           : '2.9.0',
             view_binding   : '1.5.6',
-            navigation     : '2.4.2',
+            navigation     : '1.7.15-beta',
             timber         : '5.0.1',
             date_time      : '1.4.0',
             adapterdelegate: '4.3.2',
@@ -55,7 +55,7 @@ ext {
                     core      : "io.insert-koin:koin-core:${versions.di.koin}",
                     android   : "io.insert-koin:koin-android:${versions.di.koin}",
                     navigation: "io.insert-koin:koin-androidx-navigation:${versions.di.koin}",
-                    compose: "io.insert-koin:koin-androidx-compose:${versions.di.koin}"
+                    compose   : "io.insert-koin:koin-androidx-compose:${versions.di.koin}"
             ],
             material       : "com.google.android.material:material:${versions.material}",
             glide          : [
@@ -76,8 +76,8 @@ ext {
             view_binding   : "com.github.kirich1409:viewbindingpropertydelegate:${versions.view_binding}",
             adapterdelegate: "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:${versions.adapterdelegate}",
             navigation     : [
-                    core: "androidx.navigation:navigation-fragment-ktx:${versions.navigation}",
-                    ktx : "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+                    core: "io.github.raamcosta.compose-destinations:animations-core:${versions.navigation}",
+                    ksp : "io.github.raamcosta.compose-destinations:ksp:${versions.navigation}"
             ],
             date_time      : "com.jakewharton.threetenabp:threetenabp:${versions.date_time}",
             timber         : "com.jakewharton.timber:timber:${versions.timber}"
